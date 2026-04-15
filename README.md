@@ -1,6 +1,6 @@
 Threat Hunting Case: Suspected Ransomware & DCSync Attack
 
-Overview
+                                                        Overview
 
 This project documents a threat hunting investigation involving suspicious PowerShell execution, system reconnaissance, and abnormal Active Directory replication activity.
 
@@ -9,34 +9,34 @@ The goal was to identify potential attacker behavior using both host-based logs 
 
 ---
 
-Scenario
+                                    Scenario
 
 A user downloaded a suspicious tool, which led to potential compromise. Investigation was conducted using:
 
-Event Viewer logs
+1. Event Viewer logs
 
-Network packet capture (Wireshark)
+2. Network packet capture (Wireshark)
 
 
 
 ---
 
-Host Analysis
+                        Host Analysis
 
 Evidence of suspicious script execution using:
 
-PowerShell
+1. PowerShell
 
-Execution flag: ExecutionPolicy Bypass
+2. Execution flag: ExecutionPolicy Bypass
 
 
-Observed Behavior:
+            Observed Behavior
 
-System log enumeration
+1. System log enumeration
 
-Driver and hardware inspection
+2. Driver and hardware inspection
 
-Virtual environment detection (Xen drivers)
+3. Virtual environment detection (Xen drivers)
 
 
 This indicates:
@@ -47,15 +47,15 @@ environment reconnaissance
 
 ---
 
- Network Analysis
+                   Network Analysis
 
 Wireshark revealed:
 
-RPC communication over port 135
+1. RPC communication over port 135
 
-Use of DRSUAPI
+2. Use of DRSUAPI
 
-NTLM authentication using admin credentials
+3. NTLM authentication using admin credentials
 
 
 Suspicious Activity:
@@ -71,25 +71,25 @@ DCSync attack
 
 ---
 
- Indicators of Compromise (IOCs)
+                   Indicators of Compromise (IOCs)
 
-PowerShell script: superimportant-updated.ps1
+1. PowerShell script: superimportant-updated.ps1
 
-Execution with ExecutionPolicy Bypass
+2. Execution with ExecutionPolicy Bypass
 
-Internal communication: 10.0.0.20 → 10.0.0.10
+3. Internal communication: 10.0.0.20 → 10.0.0.10
 
-Admin account usage: LAB\admin
+4. Admin account usage: LAB\admin
 
-Suspicious binary: mimikatz.exe
+5. Suspicious binary: mimikatz.exe
 
-Hashes extracted from infected computer
+6. Hashes extracted from infected computer
 
 
 
 ---
 
- Attack Chain
+                   Attack Chain
 
 1. User downloads malicious tool
 
