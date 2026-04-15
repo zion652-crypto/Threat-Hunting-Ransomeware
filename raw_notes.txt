@@ -1,0 +1,6 @@
+Threat Hunting: Ransomware
+Perry, a software developer, downloaded a suspicious tool that led to a ransomware attack. We suspected that the attacker ran a PowerShell script as shown in the Event Viewer logs.
+But with the few pieces of evidence such as network domains, IP addresses, file extensions, filenames, and hashes, I can move on with logs. It looks like the IP address is linked to an external Apache server.
+One of the hashes is linked to a trojan horse with the filename mimikatz.exe.
+According to the current network traffic, a DCSync attack is going on. This means an attacker is pretending to be a Domain Controller and requesting password hashes from Active Directory.
+The PowerShell script being executed shows that it was run with security protections disabled, querying system logs, looking for crashes and errors, and listing installed drivers.
