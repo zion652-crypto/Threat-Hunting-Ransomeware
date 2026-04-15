@@ -1,6 +1,6 @@
 Threat Hunting Case: Suspected Ransomware & DCSync Attack
 
-                                                        Overview
+  Overview
 
 This project documents a threat hunting investigation involving suspicious PowerShell execution, system reconnaissance, and abnormal Active Directory replication activity.
 
@@ -9,7 +9,7 @@ The goal was to identify potential attacker behavior using both host-based logs 
 
 ---
 
-                                    Scenario
+  Scenario
 
 A user downloaded a suspicious tool, which led to potential compromise. Investigation was conducted using:
 
@@ -21,7 +21,7 @@ A user downloaded a suspicious tool, which led to potential compromise. Investig
 
 ---
 
-                        Host Analysis
+  Host Analysis
 
 Evidence of suspicious script execution using:
 
@@ -30,7 +30,7 @@ Evidence of suspicious script execution using:
 2. Execution flag: ExecutionPolicy Bypass
 
 
-            Observed Behavior
+Observed Behavior
 
 1. System log enumeration
 
@@ -47,7 +47,7 @@ environment reconnaissance
 
 ---
 
-                   Network Analysis
+  Network Analysis
 
 Wireshark revealed:
 
@@ -71,7 +71,7 @@ DCSync attack
 
 ---
 
-                   Indicators of Compromise (IOCs)
+   Indicators of Compromise (IOCs)
 
 1. PowerShell script: superimportant-updated.ps1
 
@@ -89,7 +89,7 @@ DCSync attack
 
 ---
 
-                   Attack Chain
+   Attack Chain
 
 1. User downloads malicious tool
 
@@ -109,11 +109,11 @@ DCSync attack
 
 Impact
 
-Potential credential compromise
+1. Potential credential compromise
 
-Risk of full domain takeover
+2. Risk of full domain takeover
 
-Possible ransomware deployment
+3. Possible ransomware deployment
 
 
 
@@ -121,15 +121,15 @@ Possible ransomware deployment
 
 Recommendations
 
-Isolate affected system
+1. Isolate affected system
 
-Reset all privileged credentials
+2. Reset all privileged credentials
 
-Audit Domain Controller activity
+3. Audit Domain Controller activity
 
-Enable advanced logging (PowerShell & process creation)
+4. Enable advanced logging (PowerShell & process creation)
 
-Perform full malware scan
+5. Perform full malware scan
 
 
 
@@ -137,18 +137,20 @@ Perform full malware scan
 
  Skills Demonstrated
 
-Log analysis (Event Viewer)
+1. Log analysis (Event Viewer)
 
-Network analysis (Wireshark)
+2. Network analysis (Wireshark)
 
-Threat detection & correlation
+3. Threat detection & correlation
 
-Understanding of Active Directory attacks
+4. Understanding of Active Directory attacks
 
-Incident reporting
+5. Incident reporting
 
 
-Author
+
+
+    Author
 Christopher Tayo
 
 
