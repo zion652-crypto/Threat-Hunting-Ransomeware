@@ -153,7 +153,5 @@ Recommendations
 ---
 
 
-Author
-Christopher Tayo
 
 
